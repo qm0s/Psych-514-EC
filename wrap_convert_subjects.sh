@@ -5,6 +5,11 @@ set -e
 #this is the assumed directory.
 WORK_DIR="$HOME/psych514-practice/lesson7/Cornucopia"
 
+if [ "$WORK_DIR" -ne 1]; then
+	echo "Directory $WORK_DIR does not exist." >&2
+    exit 1
+fi
+
 mkdir -p "$WORK_DIR/logs"
 
 cd "$HOME/psych514-practice/lesson7/FruitScans"
