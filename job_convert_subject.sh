@@ -10,7 +10,7 @@ set -e
 # Require one subject argument.
 if [ "$#" -ne 1 ]; then
     echo "Usage: sbatch job_convert_subject.sh SUBJECT" >&2
-    exit 1
+    exit 0
 fi
 
 SUBJECT="$1"
