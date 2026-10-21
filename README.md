@@ -5,6 +5,7 @@ Takes the subject name and uses it to locate the DICOMs and give names to files.
 
 wrap_convert_subjects.sh 
 Goes through each subject file, passes the mane to the sbatch job script, and sets logs.
+note: you must specify the directory in the file
 
 Required programs:
 dcm2niix
