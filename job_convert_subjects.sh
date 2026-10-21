@@ -2,6 +2,7 @@
 
 set -e
 
+#this is the assumed directory.
 WORK_DIR="$HOME/psych514-practice/lesson7/Cornucopia"
 
 mkdir -p "$WORK_DIR/logs"
