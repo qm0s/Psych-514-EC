@@ -26,13 +26,8 @@ T1_DIRS=("$DICOM_DIR"/t1*/)
 T2_DIRS=("$DICOM_DIR"/t2*/)
 
 #check to see if the t1 and 2 directories exist, if not, output error into file
-if [ "${#T1_DIRS[@]}" -ne 1 ]; then
-	echo "Expected one T1 directory for $SUBJECT" >&2
-fi
-
-if [ "${#T2_DIRS[@]}" -ne 1 ]; then
-    echo "Expected one HHR directory for $SUBJECT. Check the input names." >&2
-    exit 1
+if [ "${#T1_DIRS[@]}" -ne 1 || "${#T2_DIRS[@]}" -ne 1]; then
+	echo "Expected one T1 and one HHR directory for $SUBJECT" >&2
 fi
 
 #make the output dir
